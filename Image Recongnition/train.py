@@ -5,7 +5,7 @@ import os
 
 # Removed unnecessary imports (pandas, seaborn, cv2)
 
-x  = 'image_data/test/'
+x  = 'image_data/seg_test/'
 path = Path(x)
 
 
