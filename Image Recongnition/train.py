@@ -5,7 +5,7 @@ import os
 
 # Removed unnecessary imports (pandas, seaborn, cv2)
 
-x  = 'image_data/seg_train/'
+x  = 'image_data/test/'
 path = Path(x)
 
 
@@ -36,5 +36,4 @@ learn.fit_one_cycle(20, slice(1e-5, 1e-4))  # Adjust learning rates and potentia
 img = load_image('image_data/seg_test/glacier/21982.jpg')
 print(learn.predict(img)[0])
 
-learn.save('model_checkpoint.pkl') 
 learn.export('export.pkl')
