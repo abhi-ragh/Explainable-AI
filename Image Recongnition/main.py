@@ -7,7 +7,7 @@ from PIL import Image
 # Define device (CPU or GPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-data_dir = "image_data/test"  # Replace with your actual path
+data_dir = "image_data"  # Replace with your actual path
 
 train_dir = os.path.join(data_dir, "seg_train")
 test_dir = os.path.join(data_dir, "seg_test")
@@ -50,7 +50,7 @@ criterion = torch.nn.CrossEntropyLoss()
 
 optimizer = torch.optim.Adam(model.fc.parameters(), lr=0.001)  # Adjust learning rate (lr)
 
-num_epochs = 10
+num_epochs = 40
 
 def train_model(model, criterion, optimizer, num_epochs, train_dataloader, device):
   """Trains the image classification model on the provided data.
