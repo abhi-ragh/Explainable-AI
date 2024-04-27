@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import shap
-shap.initjs()
 
 def predict_house_price(user_input):
     home_data = pd.read_csv('Housing_Price_Prediction/train.csv')
