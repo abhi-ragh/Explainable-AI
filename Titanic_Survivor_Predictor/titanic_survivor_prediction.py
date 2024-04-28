@@ -40,12 +40,12 @@ def predict_survivor(user_input):
 
 def preprocess_user_input(user_input):
     # Ensure that the 'Sex' key is present in the user input dictionary
-    sex = user_input.get('Sex', 'Unknown')
+    #sex = user_input.get('Sex', 'Unknown')
     # Create a DataFrame from the user input dictionary
     user_df = pd.DataFrame([user_input])
     # Encode 'Sex' feature into separate binary columns
-    user_df['Sex_female'] = 1 if sex == 'Female' else 0
-    user_df['Sex_male'] = 1 if sex == 'Male' else 0
+    #user_df['Sex_female'] = 1 if sex == 'Female' else 0
+    #user_df['Sex_male'] = 1 if sex == 'Male' else 0
     # Check if 'Sex' column exists before dropping it
     if 'Sex' in user_df.columns:
         user_df.drop('Sex', axis=1, inplace=True)
